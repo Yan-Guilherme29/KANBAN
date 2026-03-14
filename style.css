@@ -1,20 +1,73 @@
 body{
     background-color: rgb(227, 238, 243);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
 }
 
 h1{
     text-align: center;
+    color: rgb(8, 8, 141);
+    margin-bottom: 20px;
+}
+
+h2{
+    text-align: center;
 }
 
 .criacao-card{
-    text-align: center;
-}
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
 
+}
 
 .kanban{
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 20px;
-    text-align: center;
 }
 
+.coluna{
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
+}
+
+.lista-cards{
+    min-height: 400px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f4f6f8;
+    border-radius: 10px;
+}
+
+input{
+    width: 100%;
+    max-width: 500px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+button{
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+
+@media (max-width: 768px){
+    .kanban{
+        grid-template-columns: 1fr;
+    }
+
+    .criacao-card{
+        flex-direction: column;
+        align-items: center;
+    }
+}
