@@ -8,33 +8,26 @@ const fazendo = document.getElementById("fazendo")
 
 const concluido = document.getElementById("concluido")
 
-aFazer.addEventListener("dragover", function(event){
-    event.preventDefault()
-})
-
-fazendo.addEventListener("dragover", function(event){
-    event.preventDefault()
-})
-
-concluido.addEventListener("dragover", function(event){
-    event.preventDefault()
-})
-
-aFazer.addEventListener("drop", function(){
-    aFazer.appendChild(variavelCardArrastado)
-})
-
-fazendo.addEventListener("drop", function(){
-    fazendo.appendChild(variavelCardArrastado)
-})
-
-concluido.addEventListener("drop", function(){
-    concluido.appendChild(variavelCardArrastado)
-})
-
-btnCriar.addEventListener("click", criarTarefa);
-
 let variavelCardArrastado = null
+
+function permitirDrop(event) {
+    event.preventDefault();
+}
+
+function configurarColuna(coluna){
+    coluna.addEventListener("dragover", permitirDrop)
+
+    coluna.addEventListener("drop", function(){
+
+    coluna.appendChild(variavelCardArrastado)
+    variavelCardArrastado = null
+
+    })
+}
+
+configurarColuna(aFazer);
+configurarColuna(fazendo);
+configurarColuna(concluido);
 
 function criarTarefa() {
 
@@ -66,3 +59,5 @@ function criarTarefa() {
     inputTarefa.focus()
 
 }
+
+btnCriar.addEventListener("click", criarTarefa);
