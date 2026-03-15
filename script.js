@@ -20,6 +20,18 @@ concluido.addEventListener("dragover", function(event){
     event.preventDefault()
 })
 
+aFazer.addEventListener("drop", function(){
+    aFazer.appendChild(variavelCardArrastado)
+})
+
+fazendo.addEventListener("drop", function(){
+    fazendo.appendChild(variavelCardArrastado)
+})
+
+concluido.addEventListener("drop", function(){
+    concluido.appendChild(variavelCardArrastado)
+})
+
 btnCriar.addEventListener("click", criarTarefa);
 
 let variavelCardArrastado = null
