@@ -71,3 +71,11 @@ button{
         align-items: center;
     }
 }
+
+.card{
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    cursor: grab;
+}
