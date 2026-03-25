@@ -82,12 +82,12 @@ button:hover{
     justify-content: space-between;
     align-items: center;
 
-    gap: 10px; /* 🔥 espaço entre texto e botão */
+    gap: 10px; 
 
     cursor: grab;
 }
 
-/* Área de conteúdo (onde funciona o dblclick) */
+/* Área de conteúdo */
 .conteudo{
     flex: 1;
     cursor: pointer;

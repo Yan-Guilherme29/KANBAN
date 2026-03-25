@@ -64,7 +64,7 @@ function criarCard(tarefa){
     novoCard.classList.add("card");
     novoCard.setAttribute("draggable", "true");
 
-    // CONTEÚDO (área clicável)
+    // CONTEÚDO
     const conteudo = document.createElement("div");
     conteudo.classList.add("conteudo");
 
@@ -94,7 +94,7 @@ function criarCard(tarefa){
         variavelCardArrastado = novoCard;
     });
 
-    // EDITAR (AGORA SÓ NO CONTEÚDO)
+    // EDITAR 
     conteudo.addEventListener("dblclick", function(){
 
         const textoAtual = spanTexto.textContent;
